@@ -1,7 +1,7 @@
-#About This Projects 🚀
+# About This Projects 🚀
 Creating simple projects and challenges with HTML, CSS, & JavaScript.
 
-#Technologies 🛠️
+# Technologies 🛠️
 - `HTML`
 - `CSS`
 - `JavaScript`
