@@ -24,11 +24,11 @@ body {
 }
 
 .panel {
-    width: 70px;
+    flex: 0 1 70px;
     height: 90vh;
     position: relative;
     overflow: hidden;
-    transition: width 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: flex 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .panel h3 {
@@ -59,7 +59,7 @@ body {
 }
 
 .panel.active {
-    width: 350px;
+    flex: 0 1 350px;
 }
 
 .panel.active img,
@@ -69,7 +69,18 @@ body {
 
 
 @media screen and (max-width: 480px) {
+    .container{
+        width: 100vw;
+        padding-inline: 5px;
+        gap: 10px;
+    }
     .panel:nth-child(1), .panel:nth-child(5) {
         display: none;
+    }
+
+    .panel h3 {
+        padding: .5rem;
+        bottom: 20px;
+        left: 15px;
     }
 }
