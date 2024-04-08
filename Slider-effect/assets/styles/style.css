@@ -1,0 +1,242 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    /* 0.625 * 16px(default) = 10px */
+    font-size: 62.5%;
+    overflow: hidden;
+}
+
+body {
+    color: #f5f5f5;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+a:link,
+a:visited {
+    display: inline-block;
+    text-decoration: none;
+    color: #f5f5f5;
+}
+
+.header {
+    min-height: 100svh;
+    max-width: 1140px;
+    margin: 0 auto;
+    overflow-x: hidden;
+}
+
+.nav-bar {
+    width: 100%;
+    padding: 4rem;
+    padding-right: 0;
+    font-size: 1.6rem;
+    background-color: rgba(51, 51, 51, 0.2);
+    backdrop-filter: blur(50px);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.link-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header__section {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.header__section-list {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.header__section-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.header__section-list:first-child {
+    z-index: 5;
+}
+
+.text-box {
+    padding: 4rem;
+    max-width: 600px;
+    position: relative;
+    background-color: rgb(51, 51, 51, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.heading-tertiary {
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-weight: 100;
+}
+
+.heading-primary {
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.paragrraph {
+    margin-bottom: 2rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-weight: 100;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    margin-left: 0.5rem;
+    border-radius: 5px;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn--secondary {
+    background-color: transparent;
+    border: 1px solid #f5f5f5;
+    color: #f5f5f5;
+}
+
+.slider {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    z-index: 50;
+}
+
+.slider__item {
+    width: 135px;
+    height: 200px;
+    transition: transform 0.2s;
+}
+
+.slider__item:hover {
+    transform: translateY(-5px);
+}
+
+.slider__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.progress-bar {
+    width: 0;
+    height: 5px;
+    background-color: #f5f5f5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 110;
+}
+
+.btn-rounded {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    top: 80%;
+    left: 4rem;
+    z-index: 50;
+}
+
+.btn-rounded button {
+    width: 3rem;
+    height: 3rem;
+    background-color: #eeeeee38;
+    border: none;
+    border-radius: 50%;
+    color: #f5f5f5;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+/* animate content in */
+.header__section-list:first-child .text-box {
+    transform: translateY(50px);
+    filter: blur(10px);
+    opacity: 0;
+    animation: show-in 0.5s linear 0.8s forwards;
+}
+
+/* next button */
+.next-sec .header__section-list:first-child .header__section-img {
+    width: 135px;
+    height: 200px;
+    border-radius: 5px;
+    bottom: 20px;
+    left: 50%;
+    animation: zoom-in-img 0.5s linear forwards;
+}
+
+.next-img .slider__item:last-child {
+    transition: all .5s;
+}
+
+.next-img .slider__item {
+    transform: translateX(135px);
+    animation: move-left 0.5s linear forwards;
+}
+
+.progress-bar.time-out {
+    width: 100%;
+    animation: time-out 1.5s linear forwards;
+}
+
+/* prev button */
+.prev-sec .header__section-list:nth-child(2) .header__section-img {
+    z-index: 5;
+    animation: zoom-out-img 0.5s linear forwards;
+    /* animation-delay: 0.5s; */
+}
+
+.prev-sec .header__section-list:nth-child(2) .text-box {
+    z-index: 5;
+    animation: show-out 0.5s linear forwards;
+}
+
+.prev-img {
+    transform: translateX(-135px);
+    animation: move-left 0.5s linear forwards;
+}
+
+.prev-img .slider__item:first-child {
+    opacity: 0;
+    animation: grow-img1 1.5s linear forwards;
+}
