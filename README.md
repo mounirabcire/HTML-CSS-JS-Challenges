@@ -19,3 +19,6 @@ Creating simple projects and challenges with HTML, CSS, & JavaScript.
 
 ## Progress Steps
 [demo](https://github.com/mounirabcire/HTML-CSS-JS-Challenges/assets/153240368/2f410b58-7b87-4be6-a004-e3fb99630595)
+
+## Slider Effect
+[demo](https://github.com/mounirabcire/HTML-CSS-JS-Challenges/assets/153240368/f6b35d62-f391-47d1-94d0-fe5ba605a64b)
