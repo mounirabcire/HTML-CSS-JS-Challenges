@@ -22,3 +22,6 @@ Creating simple projects and challenges with HTML, CSS, & JavaScript.
 
 ## Slider Effect
 [demo](https://github.com/mounirabcire/HTML-CSS-JS-Challenges/assets/153240368/f6b35d62-f391-47d1-94d0-fe5ba605a64b)
+
+## Rotating Navigation
+[demo](https://github.com/mounirabcire/HTML-CSS-JS-Challenges/assets/153240368/2b5c8feb-8338-473e-9de2-041639561160)
